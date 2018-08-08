@@ -1,0 +1,62 @@
+[
+    {
+      "name": "To Elaikon",
+      "type": "Tavern",
+      "latitude": 37.96167,
+      "longitude": 23.75332400000002
+    },
+    {
+      "name": "Balcony In Cyclades",
+      "type": "Tavern",
+      "latitude": 37.9430559,
+      "longitude": 23.772256900000002
+    },
+    {
+      "name": "Triantaphylliés",
+      "type": "Tavern",
+      "latitude": 37.9469055,
+      "longitude": 23.773595500000056
+    },
+    {
+      "name": "Mouries",
+      "type": "Tavern",
+      "latitude": 37.9659115,
+      "longitude": 23.743696699999987
+    },
+    {
+      "name": "Roumelē",
+      "type": "Tavern",
+      "latitude": 37.9568778,
+      "longitude": 23.754534599999943
+    },
+    {
+      "name": "BEER ON US",
+      "type": "Bar",
+      "latitude": 37.954553,
+      "longitude": 23.759576
+    },
+    {
+      "name": "La Ronda",
+      "type": "Bar",
+      "latitude": 37.959314,
+      "longitude": 23.755014
+    },
+    {
+      "name": "Stigma Bar",
+      "type": "Bar",
+      "latitude": 37.94548,
+      "longitude": 23.766653
+    },
+    {
+      "name": "Pezodromos",
+      "type": "Bar",
+      "latitude": 37.95613,
+      "longitude": 23.758145
+    },
+    {
+      "name": "Spirit + All day Bar-Coffee",
+      "type": "Bar",
+      "latitude": 37.9548306,
+      "longitude": 23.757310500000017
+    }
+  ]
