@@ -1,38 +1,31 @@
 import React, { Component } from "react";
-import LocationList from "./LocationList";
+import LocList from "./LocList";
 
 class App extends Component {
-  /**
-   * Constructor
-   */
+
   constructor(props) {
     super(props);
     this.state = {
-      alllocations: require("./places.json"), // Get the locations from the JSON file
+      alllocations: require("./bars.json"),
       map: "",
       infowindow: "",
       prevmarker: ""
     };
 
-    // retain object instance when used in the function
+
     this.initMap = this.initMap.bind(this);
     this.openInfoWindow = this.openInfoWindow.bind(this);
     this.closeInfoWindow = this.closeInfoWindow.bind(this);
   }
 
   componentDidMount() {
-    // Connect the initMap() function within this class to the global window context,
-    // so Google Maps can invoke it
     window.initMap = this.initMap;
-    // Asynchronously load the Google Maps script, passing in the callback reference
     loadMapJS(
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bWcrbAiqpEi3q3GVgbkOYN3E8vQHKzQ&callback=initMap"
     );
   }
 
-  /**
-   * Initialise the map once the google map script is loaded
-   */
+
   initMap() {
     var self = this;
 
@@ -91,10 +84,6 @@ class App extends Component {
     });
   }
 
-  /**
-   * Open the infowindow for the marker
-   * @param {object} location marker
-   */
   openInfoWindow(marker) {
     this.closeInfoWindow();
     this.state.infowindow.open(this.state.map, marker);
@@ -102,23 +91,21 @@ class App extends Component {
     this.setState({
       prevmarker: marker
     });
-    this.state.infowindow.setContent("Loading Data...");
+    this.state.infowindow.setContent("Loading data..");
     this.state.map.setCenter(marker.getPosition());
     this.state.map.panBy(0, -200);
     this.getMarkerInfo(marker);
   }
 
-  /**
-   * Retrive the location data from the foursquare api
-   */
+
+   // Foursquare api
+
   getMarkerInfo(marker) {
     var self = this;
 
-    // Add the api keys for foursquare
     var clientId = "ITRSCD0ZDJADZGM0BD5MZRPA4ZTQTR2VKHWDDSPZWX0K42BG";
     var clientSecret = "S2N4OUJZRLP1FDEMNYLK4BEZPR1FJW4CHCGHTFMMDRFHP10U";
 
-    // Build the api endpoint
     var url =
       "https://api.foursquare.com/v2/venues/search?client_id=" +
       clientId +
@@ -132,11 +119,10 @@ class App extends Component {
     fetch(url)
       .then(function(response) {
         if (response.status !== 200) {
-          self.state.infowindow.setContent("Sorry data can't be loaded");
+          self.state.infowindow.setContent("Sorry data cannot be loaded");
           return;
         }
 
-        // Get the text in the response
         response.json().then(function(data) {
           console.log(data);
 
@@ -160,15 +146,10 @@ class App extends Component {
         });
       })
       .catch(function(err) {
-        self.state.infowindow.setContent("Sorry data can't be loaded");
+        self.state.infowindow.setContent("Sorry data cannot be loaded");
       });
     }
 
-  /**
-   * Close the info window previously opened
-   *
-   * @memberof App
-   */
   closeInfoWindow() {
     if (this.state.prevmarker) {
       this.state.prevmarker.setAnimation(null);
@@ -178,13 +159,11 @@ class App extends Component {
     });
     this.state.infowindow.close();
   }
-  /**
-   * Render for react
-   */
+
   render() {
     return (
       <div>
-        <LocationList
+        <LocList
           key="100"
           alllocations={this.state.alllocations}
           openInfoWindow={this.openInfoWindow}
@@ -198,17 +177,13 @@ class App extends Component {
 
 export default App;
 
-/**
- * Load the google maps
- * @param {src} url of the google maps script
- */
 function loadMapJS(src) {
   var ref = window.document.getElementsByTagName("script")[0];
   var script = window.document.createElement("script");
   script.src = src;
   script.async = true;
   script.onerror = function() {
-    document.write("Google Maps can't be loaded");
+    document.write("Google Maps cannot be loaded");
   };
   ref.parentNode.insertBefore(script, ref);
 }

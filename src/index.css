@@ -12,38 +12,38 @@ body {
 }
 
 .search-field {
-  width: 320px;
-  padding: 5px;
+  width: 350px;
+  padding: 6px;
 }
 
 .search-area {
-  font-size: 1.1em;
+  font-size: 1.2em;
   float: right;
 }
 
 .location-list {
   padding: 0;
-  margin: 5px;
+  margin: 6px;
   overflow: auto;
 }
 
 .search-input {
-  padding: 5px 10px;
+  padding: 6px 11px;
   font-size: 1.3em;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-weight: 550;
 }
 
 .place {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-weight: 550;
   font-size: 1em;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  -webkit-transition: background-color 500ms;
-  -moz-transition: background-color 500ms;
-  transition: background-color 500ms;
-  border-radius: 6px;
+  -webkit-transition: background-color 550ms;
+  -moz-transition: background-color 550ms;
+  transition: background-color 550ms;
+  border-radius: 7px;
 }
 
 .place:hover {
@@ -53,11 +53,11 @@ body {
 
 .location-item {
   padding: 10px;
-  margin: 0;
+  margin: 1;
   background-color: #fff;
   list-style-type: none;
-  text-align: center;
-  border: solid green 1px;
+  text-align: right;
+  border: solid rgb(201, 154, 123) 1px;
 }
 
 .location-item:hover {
@@ -70,26 +70,16 @@ body {
   position: absolute;
   max-height: 50%;
   overflow: auto;
-  left: 0.5%;
-  top: 6%;
+  right: 0.5%;
+  top: 8%;
   z-index: 2;
-  background-color: lightseagreen;
-  opacity: 0.9;
+  background-color: rgb(108, 156, 201);
+  opacity: 0.8;
 }
-
-/* ul {
-  background: white;
-  border: 1px solid darkgrey;
-  overflow: auto;
-  padding: 0px;
-  margin: 0;
-  max-height: 200px;
-  overflow: auto;
-} */
 
 .box {
   cursor: pointer;
-  padding: 5px;
+  padding: 4.5px;
 }
 
 .box:hover {
@@ -98,10 +88,10 @@ body {
 }
 
 .button {
-  text-align: center;
-  padding: 5px;
+  text-align: right;
+  padding: 6px;
   background-color: white;
-  border: 1px darkgrey solid;
+  border: 1px rgba(175, 166, 166, 0.952) solid;
   cursor: pointer;
-  width: 334px;
+  width: 300px;
 }

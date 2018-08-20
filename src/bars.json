@@ -1,11 +1,5 @@
 [
     {
-      "name": "To Elaikon",
-      "type": "Tavern",
-      "latitude": 37.96167,
-      "longitude": 23.75332400000002
-    },
-    {
       "name": "Balcony In Cyclades",
       "type": "Tavern",
       "latitude": 37.9430559,
@@ -28,12 +22,6 @@
       "type": "Tavern",
       "latitude": 37.9568778,
       "longitude": 23.754534599999943
-    },
-    {
-      "name": "BEER ON US",
-      "type": "Bar",
-      "latitude": 37.954553,
-      "longitude": 23.759576
     },
     {
       "name": "La Ronda",

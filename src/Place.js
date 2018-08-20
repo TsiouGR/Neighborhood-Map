@@ -1,9 +1,7 @@
 import React from "react";
 
 class Place extends React.Component {
-  /**
-   * Render function of Place
-   */
+  
   render() {
     return (
       <li
