@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Place from "./Place";
+import Places from "./Places";
 
 class LocList extends Component {
 
@@ -42,7 +42,7 @@ class LocList extends Component {
   render() {
     var locationlist = this.state.locations.map(function(listItem, index) {
       return (
-        <Place
+        <Places
           key={index}
           openInfoWindow={this.props.openInfoWindow.bind(this)}
           data={listItem}

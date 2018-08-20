@@ -1,12 +1,12 @@
 import React from "react";
 
-class Place extends React.Component {
+class Places extends React.Component {
   
   render() {
     return (
       <li
         role="button"
-        className="place"
+        className="places"
         tabIndex="0"
         onKeyPress={this.props.openInfoWindow.bind(
           this,
@@ -20,4 +20,4 @@ class Place extends React.Component {
   }
 }
 
-export default Place;
+export default Places;

@@ -1,6 +1,6 @@
 # Vironas Bars & Taverns
 
-Lefkada beach viewer is an app, that presents the Greek Ionian island of Lefkada and a photo gallery of it's wonderful beaches. The app was built as the final of project of my scholarship in <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"> Udacity's front-end web developer nanodegree</a>. The general concept of this last project called neighborhood map, is to build an app about a place (with react.js), involving a map and some information about this place's location, pulled from a third party API.
+With this app you can find some bars and taverns in Vironas, a neighborhood of Athens, Greece.
 
 ## How to run
 
