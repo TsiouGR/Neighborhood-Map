@@ -4,7 +4,7 @@ With this app you can find some bars and taverns in Vironas, a neighborhood of A
 
 ## How to run
 
-You can click here <a href="https://tsiougr.github.io/Neighborhood-Map/"</a> for a live version
+You can <a href="https://tsiougr.github.io/Neighborhood-Map/">click here for a live version</a></a>
 
 #### Development build
 
