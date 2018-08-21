@@ -47,8 +47,8 @@ body {
 }
 
 .places:hover {
-  color: black;
-  background-color: white;
+  color: rgb(5, 5, 5);
+  background-color: rgb(255, 248, 248);
 }
 
 .location-item {
@@ -83,7 +83,7 @@ body {
 }
 
 .box:hover {
-  background-color: #269abc;
+  background-color: #2d99b9;
   color: white;
 }
 

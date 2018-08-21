@@ -12,7 +12,6 @@ class App extends Component {
       prevmarker: ""
     };
 
-
     this.initMap = this.initMap.bind(this);
     this.openInfoWindow = this.openInfoWindow.bind(this);
     this.closeInfoWindow = this.closeInfoWindow.bind(this);
@@ -24,7 +23,6 @@ class App extends Component {
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bWcrbAiqpEi3q3GVgbkOYN3E8vQHKzQ&callback=initMap"
     );
   }
-
 
   initMap() {
     var self = this;
@@ -96,7 +94,6 @@ class App extends Component {
     this.state.map.panBy(0, -200);
     this.getMarkerInfo(marker);
   }
-
 
    // Foursquare api
 
