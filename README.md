@@ -17,7 +17,7 @@ Navigate in the directory you want to place the app:
 
 ## How to use
 
-Choose a location by clicking on the map's markers or by selecting it from the list on the right. You can also filter the list of locations by typing the name of the place you want. Click the **Read more on FourSquare** button on the pop-up window to information about each place.
+Choose a location by clicking on the map's markers or by selecting it from the list on the right. You can also filter the list of locations by typing the name of the place you want. Click the **Read more on FourSquare** button, to get information about each place.
 
 ## Code dependencies
 
