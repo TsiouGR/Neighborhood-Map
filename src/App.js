@@ -3,6 +3,8 @@ import LocList from "./LocList";
 
 class App extends Component {
 
+// * Constructor
+
   constructor(props) {
     super(props);
     this.state = {
@@ -12,18 +14,28 @@ class App extends Component {
       prevmarker: ""
     };
 
+    // Retain object instance when used in the function
     this.initMap = this.initMap.bind(this);
     this.openInfoWindow = this.openInfoWindow.bind(this);
     this.closeInfoWindow = this.closeInfoWindow.bind(this);
   }
 
+  gm_authFailure = () => {
+    alert ('Sorry, you are not able to see the map. There was an error with your authentication.');
+ }
   componentDidMount() {
+    // Listening for authentication errors
+    window.gm_authFailure = this.gm_authFailure;
+    // Connect the initMap() function within this class to the global window context, so Google Maps can invoke it
     window.initMap = this.initMap;
+    // Asynchronously load the Google Maps script, passing in the callback reference
     loadMapJS(
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bWcrbAiqpEi3q3GVgbkOYN3E8vQHKzQ&callback=initMap"
     );
   }
 
+  // * Initialise the map once the google map script is loaded
+  
   initMap() {
     var self = this;
 
@@ -82,6 +94,11 @@ class App extends Component {
     });
   }
 
+    /**
+   * Open the infowindow for the marker
+   * @param {object} location marker
+   */
+
   openInfoWindow(marker) {
     this.closeInfoWindow();
     this.state.infowindow.open(this.state.map, marker);
@@ -103,6 +120,7 @@ class App extends Component {
     var clientId = "ITRSCD0ZDJADZGM0BD5MZRPA4ZTQTR2VKHWDDSPZWX0K42BG";
     var clientSecret = "S2N4OUJZRLP1FDEMNYLK4BEZPR1FJW4CHCGHTFMMDRFHP10U";
 
+    // Build the endpoint
     var url =
       "https://api.foursquare.com/v2/venues/search?client_id=" +
       clientId +
@@ -120,6 +138,7 @@ class App extends Component {
           return;
         }
 
+      // Get the text in the response
         response.json().then(function(data) {
           console.log(data);
 
@@ -147,6 +166,7 @@ class App extends Component {
       });
     }
 
+  // Close the infowindow
   closeInfoWindow() {
     if (this.state.prevmarker) {
       this.state.prevmarker.setAnimation(null);
@@ -157,6 +177,7 @@ class App extends Component {
     this.state.infowindow.close();
   }
 
+  // Render for React
   render() {
     return (
       <div>
@@ -174,6 +195,10 @@ class App extends Component {
 
 export default App;
 
+/**
+ * Load the Google maps
+ * @param {src} url of the google maps script
+ */
 function loadMapJS(src) {
   var ref = window.document.getElementsByTagName("script")[0];
   var script = window.document.createElement("script");
